@@ -1,0 +1,36 @@
+﻿<Window x:Class="DataTemplateSelectorSample001.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DataTemplateSelectorSample001"
+        xmlns:vm="clr-namespace:DataTemplateSelectorSample001.ViewModels"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.DataContext >
+        <vm:MainViewModel />
+    </Window.DataContext>
+    <Window.Resources >
+        <local:MainDataTemplateSelector x:Key="selector"/>
+        <DataTemplate x:Key="personTemplate">
+            <StackPanel Orientation="Horizontal" Margin="6">
+                <TextBlock Text="Name : "/>
+                <TextBlock Text="{Binding Name}"/>
+                <TextBlock Text="Age : " Margin="6,0,0,0"/>
+                <TextBlock Text="{Binding Age}"/>
+            </StackPanel>          
+        </DataTemplate>
+        <DataTemplate x:Key="carTemplate">
+            <Border  Margin="4">
+                <Border.Background >
+                    <SolidColorBrush Color="{Binding Color}"/>
+                </Border.Background> 
+                <StackPanel Margin="2">
+                    <TextBlock Text="Brand"/>
+                    <TextBlock Text="{Binding Brand}"/>                    
+                </StackPanel>
+            </Border>           
+        </DataTemplate>
+    </Window.Resources>
+    <ListBox HorizontalContentAlignment="Stretch" ItemsSource="{Binding Data}" ItemTemplateSelector="{StaticResource selector}"/>
+</Window>
