@@ -14,6 +14,11 @@ namespace BindingLibrary
 
         public event EventHandler CanExecuteChanged;
 
+        protected virtual void OnCanExecuteChanged()
+        {
+            CanExecuteChanged?.Invoke(this, EventArgs.Empty);
+        }
+
         public RelayCommand(Action<object> executeHandler, Func<object, bool> canExecuteHandler)
         {
             _executeHandler = executeHandler ?? throw new ArgumentNullException("execute handler can not be null");
