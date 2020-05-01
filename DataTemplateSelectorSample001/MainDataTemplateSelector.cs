@@ -12,21 +12,19 @@ namespace DataTemplateSelectorSample001
     public class MainDataTemplateSelector : DataTemplateSelector
     {
         public override DataTemplate SelectTemplate(object item, DependencyObject container)
-        {
-            var element = container as FrameworkElement;
-            if (element == null)
-            { return null;}
-           
-            if (item is Person)
+        {            
+            if (container is FrameworkElement element)
             {
-                return GetTemplate("personTemplate");
-            }
+                if (item is Person)
+                {
+                    return GetTemplate("personTemplate");
+                }
 
-            if (item is Car)
-            {
-                return GetTemplate("carTemplate");
-            }
-
+                if (item is Car)
+                {
+                    return GetTemplate("carTemplate");
+                }
+            }         
             return null;
 
 
