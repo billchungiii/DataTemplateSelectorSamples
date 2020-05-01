@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTemplateSelectorSample0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BindingLibrary", "BindingLibrary\BindingLibrary.csproj", "{1CED3DD9-0C78-426F-BBED-A5300B66B163}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTemplateSelectorSample002", "DataTemplateSelectorSample002\DataTemplateSelectorSample002.csproj", "{FE34575E-581C-44FD-B969-4758A126F91B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{1CED3DD9-0C78-426F-BBED-A5300B66B163}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1CED3DD9-0C78-426F-BBED-A5300B66B163}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1CED3DD9-0C78-426F-BBED-A5300B66B163}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE34575E-581C-44FD-B969-4758A126F91B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE34575E-581C-44FD-B969-4758A126F91B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE34575E-581C-44FD-B969-4758A126F91B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE34575E-581C-44FD-B969-4758A126F91B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
