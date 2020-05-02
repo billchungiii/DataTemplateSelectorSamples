@@ -35,8 +35,10 @@ namespace DataTemplateSelectorSample003
             var gridView = new GridView();
             foreach (var p in itemType.GetProperties())
             {
-                var column = new GridViewColumn();
-                column.Header = p.Name; 
+                var column = new GridViewColumn
+                {
+                    Header = p.Name
+                };
                 var attribute = p.GetCustomAttribute<DescriptionAttribute>();
                 if (attribute != null && source.Contains(attribute.Description))
                 {
