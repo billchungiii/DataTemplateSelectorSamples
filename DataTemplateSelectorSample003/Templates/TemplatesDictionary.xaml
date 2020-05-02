@@ -1,0 +1,22 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style TargetType="TextBlock" >
+        <Setter Property="Margin" Value="3"/>
+    </Style>
+    <DataTemplate x:Key="personNameTemplate">
+        <TextBlock Text="{Binding Name}" Foreground="Blue"/>
+    </DataTemplate>
+    <DataTemplate x:Key="personAgeTemplate">
+        <TextBlock Text="{Binding Age}" />
+    </DataTemplate>
+    <DataTemplate x:Key="carBrandTemplate">
+        <TextBlock Text="{Binding Brand}" Foreground="Black" />
+    </DataTemplate>
+    <DataTemplate x:Key="carColorTemplate">
+        <Border Width="60" Height="4" >
+            <Border.Background >
+             <SolidColorBrush Color="{Binding Color}"/>
+            </Border.Background> 
+        </Border>
+    </DataTemplate>
+</ResourceDictionary>
