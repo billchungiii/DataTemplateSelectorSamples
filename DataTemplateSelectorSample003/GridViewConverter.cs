@@ -44,11 +44,9 @@ namespace DataTemplateSelectorSample003
                 {
                     var template = source[attribute.Description] as DataTemplate;
                     column.CellTemplate = template;
-                    Debug.WriteLine(template?.DataTemplateKey);
                 }
                 gridView.Columns.Add(column);
             }
-
             return gridView;
 
         }
